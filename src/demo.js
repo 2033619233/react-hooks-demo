@@ -2,45 +2,45 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
 
-// export default class Demo extends Component {
-//     state = {
-//         count: 0
-//     }
-//     myRef = React.createRef()
+export default class Demo extends Component {
+    state = {
+        count: 0
+    }
+    myRef = React.createRef()
 
-//     add = () => {
-//         // const {count} = this.state
-//         this.setState({ count: this.state.count + 1 })
-//     }
+    add = () => {
+        // const {count} = this.state
+        this.setState({ count: this.state.count + 1 })
+    }
 
-//     componentDidMount() {
-//         this.timer = setInterval(() => {
-//             this.setState({ count: this.state.count + 1 })
-//         }, 1000)
-//     }
+    componentDidMount() {
+        this.timer = setInterval(() => {
+            this.setState({ count: this.state.count + 1 })
+        }, 1000)
+    }
 
-//     unmount = () => {
-//         ReactDOM.unmountComponentAtNode(document.getElementById('root'))
-//     }
-//     componentWillUnmount(){
-//        clearInterval(this.timer)
-//     }
-//     showRef = () => {
-//         console.log(this.myRef.current.value)
-//     }
+    unmount = () => {
+        ReactDOM.unmountComponentAtNode(document.getElementById('root'))
+    }
+    componentWillUnmount(){
+       clearInterval(this.timer)
+    }
+    showRef = () => {
+        console.log(this.myRef.current.value)
+    }
 
-//     render() {
-//         return (
-//             <div>
-//                 <input type="text" ref={this.myRef}></input>
-//                 <p>{this.state.count}</p>
-//                 <button onClick={this.add}>按钮</button>
-//                 <button onClick={this.unmount}>卸载</button>
-//                 <button onClick={this.showRef}>展示ref</button>
-//             </div>
-//         )
-//     }
-// }
+    render() {
+        return (
+            <div>
+                <input type="text" ref={this.myRef}></input>
+                <p>{this.state.count}</p>
+                <button onClick={this.add}>按钮</button>
+                <button onClick={this.unmount}>卸载</button>
+                <button onClick={this.showRef}>展示ref</button>
+            </div>
+        )
+    }
+}
 
 export default function Demo() {
     const [count, setCount] = React.useState(0)
